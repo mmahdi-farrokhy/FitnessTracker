@@ -1,0 +1,6 @@
+<mat-nav-list>
+    <a *ngIf="!isAuthenticated" mat-list-item routerLink="/signup" (click)="closeSidenav()">ثبت نام</a>
+    <a *ngIf="!isAuthenticated" mat-list-item routerLink="/login" (click)="closeSidenav()">ورود</a>
+    <a *ngIf="isAuthenticated" mat-list-item routerLink="/training" (click)="closeSidenav()">تمرین</a>
+    <a *ngIf="isAuthenticated" mat-list-item (click)="logout()">خروج</a>
+</mat-nav-list>

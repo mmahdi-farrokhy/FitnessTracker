@@ -1,0 +1,11 @@
+<mat-tab-group *ngIf="!ongoingTraining">
+    <mat-tab label="تمرین جدید">
+        <app-new-training (trainingStart)="startTraining()"></app-new-training>
+    </mat-tab>
+    <mat-tab label="تمرین قدیم">
+        <app-past-training></app-past-training>
+    </mat-tab>
+</mat-tab-group>
+
+<app-current-training *ngIf="ongoingTraining" (dialogEvent)="ongoingTraining = false">
+</app-current-training>
